@@ -3,10 +3,12 @@
 This repository contains a fine-tuned version of the **LLaMA-3.2-3B** model for generating SQL queries from natural language inputs. The model was fine-tuned using **QLoRA (Quantized Low-Rank Adaptation)** to efficiently handle large-scale parameter updates while minimizing resource requirements.  
 
 ---
+### Application Interface: 
+> The Streamlit interface will be available soon. Stay tuned for updates!
 
 ## Overview
 
-This project fine-tunes the **LLaMA-3.2-3B** model for the task of converting natural language questions into SQL queries. It is designed to allow non-technical users to easily interact with databases by generating precise SQL queries based on questions and the provided table schema.
+This project fine-tunes the **LLaMA-3.2-3B** model for the task of converting natural language questions into SQL queries. It is designed to allow non-technical users to easily interact with databases by generating precise SQL queries based on questions and the provided table schema. Refer below for usage examples
 
 The model takes two inputs to accurately generate the SQL query:
 
@@ -32,7 +34,7 @@ The model takes two inputs to accurately generate the SQL query:
 To use this model, ensure the required dependencies are installed:
 
 ```bash
-pip install transformers
+pip install -q -U transformers bitsandbytes
 ```
 
 ## Usage Example
@@ -54,9 +56,12 @@ context = "CREATE TABLE employees (id INT, name TEXT, department TEXT, hire_date
 
 get_sql_query(model,tokenizer,question,context)
 ```
-For queries involving multiple table see the usage below
+For queries involving multiple tables see the usage below
 
 ```python
+question_4 = "Find the names of customers who have placed orders with a total amount greater than the average order amount."
+context_4 = "CREATE TABLE Customers (customer_id INTEGER, name VARCHAR); CREATE TABLE Orders (order_id INTEGER, customer_id INTEGER, amount INTEGER);"
 
+get_sql_query(model,tokenizer,question_4,context_4)
 ```
 
