@@ -38,4 +38,25 @@ pip install transformers
 ## Usage Example
 ```
 !git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
+!mv Text-to-SQL_Query-LLM/text_sql_pipeline.py text_sql_pipeline.py
 ```
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model = AutoModelForCausalLM.from_pretrained("sai-santhosh/text-2-sql-Llama-3.2-3B",load_in_4bit=True)
+tokenizer = AutoTokenizer.from_pretrained("sai-santhosh/text-2-sql-Llama-3.2-3B")
+
+from text_sql_pipeline import get_sql_query
+
+question = "List all employees in the 'Sales' department hired after 2020."
+context = "CREATE TABLE employees (id INT, name TEXT, department TEXT, hire_date DATE);"
+
+get_sql_query(model,tokenizer,question,context)
+```
+For queries involving multiple table see the usage below
+
+```python
+
+```
+
