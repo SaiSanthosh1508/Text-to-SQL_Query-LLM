@@ -33,3 +33,9 @@ To use this model, ensure the required dependencies are installed:
 
 ```bash
 pip install transformers
+```
+
+## Usage Example
+```
+!git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
+```
