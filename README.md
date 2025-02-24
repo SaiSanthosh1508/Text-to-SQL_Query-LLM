@@ -1,4 +1,4 @@
-# Text-to-SQL Query LLM
+# Text-to-SQL Query Generation
 
 This repository contains a fine-tuned version of the **LLaMA-3.2-3B** model for generating SQL queries from natural language inputs. The model was fine-tuned using **QLoRA (Quantized Low-Rank Adaptation)** to efficiently handle large-scale parameter updates while minimizing resource requirements.
 
