@@ -20,7 +20,6 @@ def add_schema():
     
     if valid_input:
         st.session_state.schemas.append("")  # Add a new empty schema
-        st.rerun()  # Force an immediate rerun to update UI
 
 # Question input
 question = st.text_input(
