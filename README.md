@@ -28,7 +28,7 @@ The model takes two inputs to generate accurate SQL queries:
 To use this model, install the required dependencies:
 
 ```bash
-pip install -q -U transformers bitsandbytes
+!pip install -q -U transformers bitsandbytes
 ```
 
 ---
@@ -38,8 +38,8 @@ pip install -q -U transformers bitsandbytes
 Clone the repository and import the model:
 
 ```bash
-git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
-mv Text-to-SQL_Query-LLM/* ./
+!git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
+!mv Text-to-SQL_Query-LLM/* ./
 ```
 
 Load the model and generate SQL queries using Python:
@@ -76,22 +76,22 @@ get_sql_query(model, tokenizer, question_4, context_4)
 Clone the repository:
 
 ```bash
-git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
-mv Text-to-SQL_Query-LLM/* ./
+!git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
+!mv Text-to-SQL_Query-LLM/* ./
 ```
 
 #### **Single Table Example**
 Run the command below to generate an SQL query from a natural language question and a single table schema:
 
 ```bash
-python generate.py -q "Find the zip code where the mean visibility is lower than 10." -c "CREATE TABLE weather (zip_code VARCHAR, mean_visibility_miles INTEGER);"
+!python generate.py -q "Find the zip code where the mean visibility is lower than 10." -c "CREATE TABLE weather (zip_code VARCHAR, mean_visibility_miles INTEGER);"
 ```
 
 #### **Multiple Tables Example**
 To pass multiple table schemas, use `-c` before each table schema:
 
 ```bash
-python generate.py -q "Find all cities with temperatures above 90°F." \
+!python generate.py -q "Find all cities with temperatures above 90°F." \
 -c "CREATE TABLE weather (zip_code VARCHAR, city VARCHAR, temperature INTEGER);" \
 -c "CREATE TABLE population (city VARCHAR, population INTEGER);"
 ```
