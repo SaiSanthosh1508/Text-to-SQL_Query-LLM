@@ -23,12 +23,15 @@ def add_schema():
         st.rerun()  # Force an immediate rerun to update UI
 
 # Question input
-st.session_state.question = st.text_input(
+question = st.text_input(
     "Question", 
     value=st.session_state.question, 
     key="question", 
     placeholder="Enter your text"
 )
+
+if "question" not in st.session_state:
+    st.session_state.question = question
 
 # Display text inputs for schemas
 for i in range(len(st.session_state.schemas)):
