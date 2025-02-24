@@ -5,5 +5,5 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 st.title("📑 Convert Text to SQL-Query")
 
-question = st.text_input("Question",key=1,place_holder="Enter your text")
+question = st.text_input("Question",key=1,placeholder="Enter your text")
 st.subheader(question)
