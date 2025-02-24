@@ -56,7 +56,7 @@ tokenizer = AutoTokenizer.from_pretrained("sai-santhosh/text-2-sql-Llama-3.2-3B"
 question = "List all employees in the 'Sales' department hired after 2020."
 context = "CREATE TABLE employees (id INT, name TEXT, department TEXT, hire_date DATE);"
 
-print(get_sql_query(model, tokenizer, question, context))
+get_sql_query(model, tokenizer, question, context)
 ```
 
 For multiple tables:
@@ -65,7 +65,7 @@ For multiple tables:
 question_4 = "Find customers who placed orders above the average order amount."
 context_4 = "CREATE TABLE Customers (customer_id INTEGER, name VARCHAR); CREATE TABLE Orders (order_id INTEGER, customer_id INTEGER, amount INTEGER);"
 
-print(get_sql_query(model, tokenizer, question_4, context_4))
+get_sql_query(model, tokenizer, question_4, context_4)
 ```
 
 ---
