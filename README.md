@@ -39,7 +39,7 @@ Clone the repository and import the model:
 
 ```bash
 git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
-cd Text-to-SQL_Query-LLM
+mv Text-to-SQL_Query-LLM/* ./
 ```
 
 Load the model and generate SQL queries using Python:
@@ -77,7 +77,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/SaiSanthosh1508/Text-to-SQL_Query-LLM
-cd Text-to-SQL_Query-LLM
+mv Text-to-SQL_Query-LLM/* ./
 ```
 
 #### **Single Table Example**
