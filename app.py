@@ -22,6 +22,7 @@ for i in range(len(st.session_state.schemas)):
 
 # Button to add more schema inputs dynamically
 if st.button("➕ Add another table schema"):
+    st.write(st.session_state.schema.values())
     st.session_state.schemas.append("")  # Add a new empty schema field
 
 # Store all schemas in the context list
