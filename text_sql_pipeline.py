@@ -55,6 +55,5 @@ def get_sql_query(model ,tokenizer,question,context):
     explanation_match = re.search(explanation_pattern, generated_text, re.DOTALL)
     explanation = explanation_match.group(1).strip() if explanation_match else None
 
-    # print("\n\nQuery:\n-----------\n",sql_query)
-    # print("\n\nExplanation:\n-----------\n",explanation)
-    return query,explanation
+    print("\n\nQuery:\n-----------\n",sql_query)
+    print("\n\nExplanation:\n-----------\n",explanation)
