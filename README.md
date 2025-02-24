@@ -72,7 +72,7 @@ get_sql_query(model, tokenizer, question_4, context_4)
 ### **2. Command-Line Interface (CLI) Usage**
 
 #### ⚠️ Ensure you are connected to a GPU for faster generation
-
+#### 🔍 In case query or explanation is not generated re-run the script again
 Clone the repository:
 
 ```bash
