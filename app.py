@@ -11,7 +11,7 @@ def get_model_tokenizer(model_path_repo):
     bnb_config = BitsAndBytesConfig(
         load_in_4bit = True
     )
-    model = AutoModelForCausalLM.from_pretrained(model_path_repo,quantization_config=bnb_config)
+    model = AutoModelForCausalLM.from_pretrained(model_path_repo,quantization_config=bnb_config,device_map="cpu")
     tokenizer = AutoTokenizer.from_pretrained(model_path_repo)
     return (
         model,tokenizer
