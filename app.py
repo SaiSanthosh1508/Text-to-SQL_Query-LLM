@@ -11,26 +11,34 @@ if "question" not in st.session_state:
 if "schemas" not in st.session_state:
     st.session_state.schemas = [""]  # Start with one input field
 
-# Question input stored in session state
-st.session_state.question = st.text_input(
+# Question input, using on_change callback to update session state
+question = st.text_input(
     "Question", 
     value=st.session_state.question, 
     key="question", 
     placeholder="Enter your text"
 )
 
+# Update session state only if input is modified
+if question != st.session_state.question:
+    st.session_state.question = question  # Update stored question
+
 # Display text inputs for schemas
 valid_input = True  # Track if all schemas are valid
 for i in range(len(st.session_state.schemas)):
-    st.session_state.schemas[i] = st.text_input(
+    schema_input = st.text_input(
         f"Enter Table Schema {i+1}",
         value=st.session_state.schemas[i],
         key=f"schema_{i}",
         placeholder="CREATE TABLE Order_Items (order_id INTEGER, product_id INTEGER);",
     )
 
+    # Update session state only if input is modified
+    if schema_input != st.session_state.schemas[i]:
+        st.session_state.schemas[i] = schema_input
+
     # Validation check: Ensure schema starts with "CREATE TABLE"
-    if not st.session_state.schemas[i].strip().upper().startswith("CREATE TABLE"):
+    if not schema_input.strip().upper().startswith("CREATE TABLE"):
         valid_input = False
         st.error(f"❌ Error in Table {i+1}: Schema must start with 'CREATE TABLE'. Please correct it.")
 
