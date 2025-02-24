@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import BitsAndBytesConfig
 from text_sql_pipeline import get_sql_query
 
-model_name = "sai-santhosh/text-2-sql-Llama-3.2-3B
+model_name = "sai-santhosh/text-2-sql-Llama-3.2-3B"
 
 
 def get_model_tokenizer(model_path_repo):
