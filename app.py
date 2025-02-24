@@ -5,7 +5,7 @@ from text_sql_pipeline import get_sql_query
 
 model_name = "sai-santhosh/text-2-sql-Llama-3.2-3B"
 
-
+@st.cache_resource
 def get_model_tokenizer(model_path_repo):
     
     bnb_config = BitsAndBytesConfig(
@@ -63,7 +63,7 @@ for i in range(len(st.session_state.schemas)):
 st.button("➕ Add another table schema", on_click=add_schema)
 
 submit = st.button("Submit")
-@st.cache_resource
+
 model,tokenizer = get_model_tokenizer(model_name)
 
 st.write(st.session_state.question)
