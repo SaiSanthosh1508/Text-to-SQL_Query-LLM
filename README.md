@@ -34,7 +34,7 @@ pip install -q -U transformers bitsandbytes
 ---
 ## Usage Examples
 ### **1. Python API Usage**
-
+#### ⚠️ Ensure you are connected to a GPU for faster generation
 Clone the repository and import the model:
 
 ```bash
@@ -70,6 +70,8 @@ print(get_sql_query(model, tokenizer, question_4, context_4))
 
 ---
 ### **2. Command-Line Interface (CLI) Usage**
+
+#### ⚠️ Ensure you are connected to a GPU for faster generation
 
 Clone the repository:
 
