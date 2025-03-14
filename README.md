@@ -2,7 +2,8 @@
 
 This repository contains a fine-tuned version of the **LLaMA-3.2-3B** model for generating SQL queries from natural language inputs. The model was fine-tuned using **QLoRA (Quantized Low-Rank Adaptation)** to efficiently handle large-scale parameter updates while minimizing resource requirements.
 
-**Hugging Face Repo:** 🤗 [sai-santhosh/text-2-sql-Llama-3.2-3B](https://huggingface.co/sai-santhosh/text-2-sql-Llama-3.2-3B)
+**Hugging Face Repo:** 🤗 [sai-santhosh/text-2-sql-Llama-3.2-3B](https://huggingface.co/sai-santhosh/text-2-sql-Llama-3.2-3B)<br>
+**HuggingFace Spaces:** 🤗 [Text-to-SQL-spaces](https://huggingface.co/spaces/sai-santhosh/Text-to-SQL-Query)
 
 ---
 
